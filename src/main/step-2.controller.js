@@ -32,6 +32,8 @@
             vm.isLoggedOut = true;
             vm.isLoggedInNoCard = false;
             vm.isLoggedIn = false;
+
+            // This is an example of setting a custom dimension based on user state
             AnalyticsService.setStatus('loggedOut');
         }
 
@@ -39,6 +41,8 @@
             vm.isLoggedOut = false;
             vm.isLoggedInNoCard = true;
             vm.isLoggedIn = false;
+
+            // This is an example of setting a custom dimension based on user state
             AnalyticsService.setStatus('loggedInNoCard');
         }
 
@@ -46,6 +50,8 @@
             vm.isLoggedOut = false;
             vm.isLoggedInNoCard = false;
             vm.isLoggedIn = true;
+
+            // This is an example of setting a custom dimension based on user state
             AnalyticsService.setStatus('loggedIn');
         }
     }

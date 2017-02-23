@@ -18,6 +18,9 @@
                     isLoggedIn: null
                 },
                 resolve: {
+                    // This is how to fire virtual pageviews when changing routes in the application
+                    // Only routes that have pageviews configured in the AnalyticsService should be
+                    // configured like this.
                     analytics: ['AnalyticsService', function(AnalyticsService) {
                         return AnalyticsService.trackPage('Step1');
                     }]
@@ -34,6 +37,9 @@
                     isLoggedIn: null
                 },
                 resolve: {
+                    // This is how to fire virtual pageviews when changing routes in the application
+                    // Only routes that have pageviews configured in the AnalyticsService should be
+                    // configured like this.
                     analytics: ['AnalyticsService', function(AnalyticsService) {
                         return AnalyticsService.trackPage('Step2');
                     }]
@@ -50,6 +56,9 @@
                     isLoggedIn: null
                 },
                 resolve: {
+                    // This is how to fire virtual pageviews when changing routes in the application
+                    // Only routes that have pageviews configured in the AnalyticsService should be
+                    // configured like this.
                     analytics: ['AnalyticsService', function(AnalyticsService) {
                         return AnalyticsService.trackPage('Step3');
                     }]
@@ -61,6 +70,9 @@
                 controller: 'ConfirmationController',
                 controllerAs: 'vm',
                 resolve: {
+                    // This is how to fire virtual pageviews when changing routes in the application
+                    // Only routes that have pageviews configured in the AnalyticsService should be
+                    // configured like this.
                     analytics: ['AnalyticsService', function(AnalyticsService) {
                         return AnalyticsService.trackPage('Confirm');
                     }]
