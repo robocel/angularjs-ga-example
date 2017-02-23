@@ -1,1 +1,9 @@
 <h1>Step 2</h1>
+
+<a ui-sref="step1({isLoggedOut:vm.isLoggedOut, isLoggedInNoCard:vm.isLoggedInNoCard, isLoggedIn: vm.isLoggedIn})">Previous</a>
+<a ui-sref="step3({isLoggedOut:vm.isLoggedOut, isLoggedInNoCard:vm.isLoggedInNoCard, isLoggedIn: vm.isLoggedIn})">Next</a>
+
+<p>Meta-Data:</p>
+<p><button ng-disabled="vm.isLoggedOut" type="button" ng-click="vm.logOut()">Logged Out</button></p>
+<p><button ng-disabled="vm.isLoggedInNoCard" type="button" ng-click="vm.logInNoCard()">Logged In With No Credit Card</button></p>
+<p><button ng-disabled="vm.isLoggedIn" type="button" ng-click="vm.logIn()">Logged In</button></p>

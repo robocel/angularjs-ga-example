@@ -11,6 +11,10 @@
 
     function AnalyticsService($q, $analytics) {
 
+        function setStatus(status) {
+            $analytics.setUserProperties({dimension1: status});
+        }
+
         function trackEvent(eventName, data) {
             if (_.isString(eventName)) {
 
@@ -56,9 +60,39 @@
             }
         }
 
+        var eventMap = {
+            OrderSubmitted: {
+                hitType: 'event',
+                eventCategory: 'OrderForm',
+                eventAction: 'Click',
+                eventLabel: 'OrderCompleted',
+                eventValue: null
+            }
+        };
+
+        var pageMap = {
+            Step1: {
+                hitType: 'pageview',
+                page: '/step1'
+            },
+            Step2: {
+                hitType: 'pageview',
+                page: '/step2'
+            },
+            Step3: {
+                hitType: 'pageview',
+                page: '/step3'
+            },
+            Confirmation: {
+                hitType: 'pageview',
+                page: '/confirm'
+            }
+        };
+
         return {
             trackEvent: trackEvent,
-            trackPage: trackPage
+            trackPage: trackPage,
+            setStatus: setStatus
         };
     }
 })();
