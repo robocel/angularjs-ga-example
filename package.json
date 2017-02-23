@@ -1,0 +1,22 @@
+{
+  "name": "angularjs-ga-example",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Sample AngularJS application showing Google Analytics integration",
+  "author": "Robert Ocel",
+  "scripts": {
+    "compile": "webpack",
+    "build": "webpack-dev-server"
+  },
+  "dependencies": {
+    "angular": "^1.6.2",
+    "angular-ui-router": "^0.4.2",
+    "angulartics": "^1.4.0",
+    "angulartics-google-analytics": "^0.4.0",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  }
+}
